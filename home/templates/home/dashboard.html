@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Owner Dashboard | SS Car Care</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fb;
+            color: #102b46;
+        }
+
+        .header {
+            height: 65px;
+            background: white;
+            border-bottom: 1px solid #e1e7ed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .owner-area {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 13px;
+        }
+
+        .logout {
+            text-decoration: none;
+            color: #ffffff;
+            background: #164a7a;
+            padding: 9px 15px;
+            border-radius: 5px;
+        }
+
+        .layout {
+            display: flex;
+            min-height: calc(100vh - 65px);
+        }
+
+        .sidebar {
+            width: 230px;
+            background: #102b46;
+            padding: 25px 15px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #dbe7f1;
+            text-decoration: none;
+            padding: 12px 14px;
+            border-radius: 5px;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #164a7a;
+            color: white;
+        }
+
+        .main {
+            flex: 1;
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .page-title {
+            margin-bottom: 25px;
+        }
+
+        .page-title h1 {
+            font-size: 27px;
+        }
+
+        .page-title p {
+            color: #6d7d8b;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid #e1e7ed;
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        .stat-label {
+            color: #6d7d8b;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .table-card {
+            background: white;
+            border: 1px solid #e1e7ed;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-header {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e8edf2;
+        }
+
+        .table-header h2 {
+            font-size: 17px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 14px 18px;
+            border-bottom: 1px solid #edf1f4;
+            font-size: 12px;
+        }
+
+        th {
+            color: #617384;
+            font-weight: 700;
+            background: #f9fbfc;
+        }
+
+        .status {
+            padding: 5px 9px;
+            background: #edf5fb;
+            color: #164a7a;
+            border-radius: 20px;
+            font-size: 11px;
+        }
+
+        @media(max-width: 900px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sidebar {
+                width: 190px;
+            }
+
+        }
+
+        @media(max-width: 650px) {
+
+            .layout {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .main {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        SS CAR CARE
+    </div>
+
+    <div class="owner-area">
+
+        <span>
+            Owner: {{ request.user.username }}
+        </span>
+
+        <a
+            href="{% url 'owner_logout' %}"
+            class="logout"
+        >
+            Logout
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <a
+            href="{% url 'owner_dashboard' %}"
+            class="active"
+        >
+            Dashboard
+        </a>
+
+        <a href="{% url 'owner_bookings' %}">
+            Bookings
+        </a>
+
+        <a href="{% url 'owner_cars' %}">
+            Cars
+        </a>
+
+        <a href="{% url 'owner_services' %}">
+            Services
+        </a>
+
+        <a href="{% url 'owner_orders' %}">
+            Orders
+        </a>
+
+        <a href="{% url 'owner_customers' %}">
+            Customers
+        </a>
+
+        <a href="{% url 'owner_messages' %}">
+            Messages
+        </a>
+
+        <a href="{% url 'home' %}">
+            View Website
+        </a>
+
+    </aside>
+
+
+    <main class="main">
+
+        <div class="page-title">
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <p>
+                Manage your SS Car Care operations.
+            </p>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    TOTAL CUSTOMERS
+                </div>
+
+                <div class="stat-value">
+                    {{ total_customers }}
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    TOTAL CARS
+                </div>
+
+                <div class="stat-value">
+                    {{ total_cars }}
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    TOTAL BOOKINGS
+                </div>
+
+                <div class="stat-value">
+                    {{ total_bookings }}
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    PENDING BOOKINGS
+                </div>
+
+                <div class="stat-value">
+                    {{ pending_bookings }}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="table-card">
+
+            <div class="table-header">
+
+                <h2>
+                    Recent Bookings
+                </h2>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            ID
+                        </th>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Vehicle
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for booking in recent_bookings %}
+
+                    <tr>
+
+                        <td>
+                            #{{ booking.id }}
+                        </td>
+
+                        <td>
+                            {{ booking.user.username }}
+                        </td>
+
+                        <td>
+                            {{ booking.vehicle.vehicle_number }}
+                        </td>
+
+                        <td>
+                            {{ booking.service.name }}
+                        </td>
+
+                        <td>
+                            {{ booking.booking_date|date:"d M Y, h:i A" }}
+                        </td>
+
+                        <td>
+
+                            <span class="status">
+                                {{ booking.status }}
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    {% empty %}
+
+                    <tr>
+
+                        <td colspan="6">
+                            No bookings yet.
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

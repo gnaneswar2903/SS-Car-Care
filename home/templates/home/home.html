@@ -1,0 +1,3573 @@
+```html
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SS Car Care - Professional car washing, cleaning, detailing and protection services."
+    >
+
+    <title>SS Car Care | Professional Car Care</title>
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/style.css' %}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP OFFER BAR
+     ===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <span>
+            Special Offer: Get 10% Off on Your First Service
+        </span>
+
+        <a href="#booking">
+            Book Now
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="main-header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="brand">
+
+            <div class="brand-mark">
+
+                <svg viewBox="0 0 32 32">
+
+                    <path d="M7 19h18" />
+
+                    <path d="M9 19l2-6h10l2 6" />
+
+                    <path d="M11 13l1.5-3h7l1.5 3" />
+
+                    <circle
+                        cx="10"
+                        cy="21"
+                        r="2"
+                    />
+
+                    <circle
+                        cx="22"
+                        cy="21"
+                        r="2"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    SS CAR CARE
+                </strong>
+
+                <span>
+                    CARE • CLEAN • PROTECT
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a
+                href="#home"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#process">
+                How It Works
+            </a>
+
+            <a href="#tracking">
+                Track Service
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                href="#booking"
+                class="nav-book"
+            >
+                Book a Service
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+     ===================================================== -->
+
+<nav
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#services">
+        Services
+    </a>
+
+    <a href="#process">
+        How It Works
+    </a>
+
+    <a href="#tracking">
+        Track Service
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+    <a href="#booking">
+        Book a Service
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section
+    class="hero-section"
+    id="home"
+>
+
+    <div class="container hero-container">
+
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                PROFESSIONAL CAR CARE
+            </span>
+
+
+            <h1>
+
+                Complete Care
+
+                <span>
+                    For Your Car.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Reliable car washing, cleaning, detailing
+                and protection services to keep your vehicle
+                clean, fresh and well maintained.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#booking"
+                    class="primary-button"
+                >
+
+                    Book a Service
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="secondary-button"
+                >
+                    View Services
+                </a>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+
+                    <strong>
+                        500+
+                    </strong>
+
+                    <span>
+                        Cars Serviced
+                    </span>
+
+                </div>
+
+
+                <div class="trust-divider"></div>
+
+
+                <div class="trust-item">
+
+                    <strong>
+                        4.8/5
+                    </strong>
+
+                    <span>
+                        Customer Rating
+                    </span>
+
+                </div>
+
+
+                <div class="trust-divider"></div>
+
+
+                <div class="trust-item">
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Care Focused
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-image-wrapper">
+
+                <img
+                    src="{% static 'images/services/full-body-wash.jpg' %}"
+                    alt="Car washing service"
+                >
+
+                <div class="hero-image-overlay"></div>
+
+            </div>
+
+
+            <div class="hero-floating-card">
+
+                <div class="floating-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M5 17h14" />
+
+                        <path d="M6 17l2-6h8l2 6" />
+
+                        <circle
+                            cx="8"
+                            cy="18"
+                            r="1.5"
+                        />
+
+                        <circle
+                            cx="16"
+                            cy="18"
+                            r="1.5"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Professional Service
+                    </strong>
+
+                    <span>
+                        Quality care for every vehicle
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK SERVICES
+     ===================================================== -->
+
+<section class="quick-services">
+
+    <div class="container quick-services-grid">
+
+
+        <div class="quick-service-item">
+
+            <svg viewBox="0 0 24 24">
+
+                <path d="M4 15h16" />
+
+                <path d="M6 15l2-6h8l2 6" />
+
+                <circle
+                    cx="7"
+                    cy="17"
+                    r="1.5"
+                />
+
+                <circle
+                    cx="17"
+                    cy="17"
+                    r="1.5"
+                />
+
+            </svg>
+
+            <span>
+                Car Wash
+            </span>
+
+        </div>
+
+
+        <div class="quick-service-item">
+
+            <svg viewBox="0 0 24 24">
+
+                <path d="M6 5h12v14H6z" />
+
+                <path d="M9 5v14" />
+
+                <path d="M15 5v14" />
+
+            </svg>
+
+            <span>
+                Interior Cleaning
+            </span>
+
+        </div>
+
+
+        <div class="quick-service-item">
+
+            <svg viewBox="0 0 24 24">
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="8"
+                />
+
+                <path d="M12 4v16" />
+
+                <path d="M4 12h16" />
+
+            </svg>
+
+            <span>
+                Detailing
+            </span>
+
+        </div>
+
+
+        <div class="quick-service-item">
+
+            <svg viewBox="0 0 24 24">
+
+                <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z" />
+
+            </svg>
+
+            <span>
+                Car Protection
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
+
+<section
+    class="services-section"
+    id="services"
+>
+
+    <div class="container">
+
+
+        <div class="services-heading">
+
+            <span class="section-label">
+                OUR SERVICES
+            </span>
+
+            <h2>
+
+                Car care made
+
+                <span>
+                    simple.
+                </span>
+
+            </h2>
+
+            <p>
+
+                Choose the service your car needs.
+                Our team focuses on proper cleaning,
+                careful handling and quality service.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <!-- SERVICE 01 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/full-body-wash.jpg' %}"
+                        alt="Full body car wash"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <div class="service-category">
+                        WASH & CLEAN
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M6 18h12" />
+
+                                <path d="M7 18l2-7h6l2 7" />
+
+                                <path d="M9 11l1-3h4l1 3" />
+
+                                <circle
+                                    cx="8"
+                                    cy="19"
+                                    r="1.2"
+                                />
+
+                                <circle
+                                    cx="16"
+                                    cy="19"
+                                    r="1.2"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Full Body Wash
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Complete exterior washing to remove
+                        dust, dirt and everyday road grime.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M4 12h16" />
+
+                                <path d="M12 4v16" />
+
+                            </svg>
+
+                            <span>
+                                Exterior + Wheels
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 02 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/interior-cleaning.jpg' %}"
+                        alt="Car interior cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <div class="service-category">
+                        INTERIOR CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M7 5h10v14H7z" />
+
+                                <path d="M10 5v5h4V5" />
+
+                                <path d="M9 14h6" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Interior Cleaning
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Cleaning of seats, dashboard, mats
+                        and other interior areas for a fresh cabin.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M6 7h12" />
+
+                                <path d="M7 7v12h10V7" />
+
+                                <path d="M9 4h6" />
+
+                            </svg>
+
+                            <span>
+                                Cabin Cleaning
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 03 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/exterior-detailing.jpg' %}"
+                        alt="Exterior car detailing"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div class="service-category">
+                        EXTERIOR CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <path d="M12 5v14" />
+
+                                <path d="M5 12h14" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Exterior Detailing
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Detailed exterior cleaning to improve
+                        the overall finish and appearance of your car.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 17h14" />
+
+                                <path d="M7 17l2-6h6l2 6" />
+
+                            </svg>
+
+                            <span>
+                                Exterior Finish
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 04 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/full-car-detailing.jpg' %}"
+                        alt="Full car detailing"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div class="service-category">
+                        COMPLETE CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 17h14" />
+
+                                <path d="M7 17l2-7h6l2 7" />
+
+                                <circle
+                                    cx="8"
+                                    cy="18"
+                                    r="1.2"
+                                />
+
+                                <circle
+                                    cx="16"
+                                    cy="18"
+                                    r="1.2"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Full Car Detailing
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        A complete cleaning package covering
+                        both the interior and exterior of your vehicle.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 12h14" />
+
+                                <path d="M12 5v14" />
+
+                            </svg>
+
+                            <span>
+                                Inside + Outside
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 05 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/paint-protection.jpg' %}"
+                        alt="Car paint protection"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <div class="service-category">
+                        PAINT CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" />
+
+                                <path d="M9 12l2 2 4-4" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Paint Protection
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Protective care for exterior paint
+                        to help maintain a clean finish.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M12 4v16" />
+
+                                <path d="M4 12h16" />
+
+                            </svg>
+
+                            <span>
+                                Paint Care
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 06 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/engine-bay-cleaning.jpg' %}"
+                        alt="Engine bay cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        06
+                    </div>
+
+                    <div class="service-category">
+                        ENGINE CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 9h4l2-3h4l1 3h3v8H5z" />
+
+                                <path d="M9 13h3" />
+
+                                <path d="M16 9v3" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Engine Bay Cleaning
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Careful cleaning of the engine bay
+                        to remove dust and accumulated dirt.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <path d="M12 8v4l3 2" />
+
+                            </svg>
+
+                            <span>
+                                Careful Cleaning
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 07 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/car-vacuuming.jpg' %}"
+                        alt="Car vacuum cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        07
+                    </div>
+
+                    <div class="service-category">
+                        INTERIOR CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 18h10" />
+
+                                <path d="M15 18v-7" />
+
+                                <path d="M15 11h4" />
+
+                                <path d="M19 11v7" />
+
+                                <path d="M8 18V8" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Car Vacuuming
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Vacuum cleaning for carpets, floor mats,
+                        seats and hard-to-reach areas.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 18h14" />
+
+                                <path d="M8 18v-6h8v6" />
+
+                            </svg>
+
+                            <span>
+                                Dust Removal
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 08 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/seat-upholstery-cleaning.jpg' %}"
+                        alt="Car seat and upholstery cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        08
+                    </div>
+
+                    <div class="service-category">
+                        SEAT CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M7 5h10v14H7z" />
+
+                                <path d="M9 5v5" />
+
+                                <path d="M15 5v5" />
+
+                                <path d="M9 14h6" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Seat & Upholstery Cleaning
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Cleaning of fabric, leather and upholstery
+                        to refresh the vehicle interior.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M6 12h12" />
+
+                                <path d="M8 12v6" />
+
+                                <path d="M16 12v6" />
+
+                            </svg>
+
+                            <span>
+                                Seat Care
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 09 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/headlight-restoration.jpg' %}"
+                        alt="Car headlight restoration"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        09
+                    </div>
+
+                    <div class="service-category">
+                        LIGHT CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 12h8" />
+
+                                <path d="M13 8l6 4-6 4z" />
+
+                                <path d="M5 8v8" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Headlight Restoration
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Cleaning and polishing of cloudy headlights
+                        to improve their appearance.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <path d="M12 8v8" />
+
+                            </svg>
+
+                            <span>
+                                Headlight Care
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 10 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/tyre-wheel-cleaning.jpg' %}"
+                        alt="Car tyre and wheel cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        10
+                    </div>
+
+                    <div class="service-category">
+                        WHEEL CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="2"
+                                />
+
+                                <path d="M12 5v5" />
+
+                                <path d="M12 14v5" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Tyre & Wheel Cleaning
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Removal of dirt and brake dust from wheels
+                        and tyres for a cleaner appearance.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="2"
+                                />
+
+                            </svg>
+
+                            <span>
+                                Wheel Cleaning
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 11 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/dashboard-care.jpg' %}"
+                        alt="Car dashboard cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        11
+                    </div>
+
+                    <div class="service-category">
+                        INTERIOR CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 14h14" />
+
+                                <path d="M7 14l2-5h6l2 5" />
+
+                                <path d="M9 17h6" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Dashboard & Plastic Care
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Cleaning and care for dashboard, door panels,
+                        console and other plastic surfaces.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M5 7h14" />
+
+                                <path d="M7 7v12h10V7" />
+
+                            </svg>
+
+                            <span>
+                                Dashboard Care
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 12 -->
+
+            <article class="premium-service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="{% static 'images/services/ac-vent-cleaning.jpg' %}"
+                        alt="Car AC vent cleaning"
+                    >
+
+                    <div class="service-image-overlay"></div>
+
+                    <div class="service-number">
+                        12
+                    </div>
+
+                    <div class="service-category">
+                        AC CARE
+                    </div>
+
+                </div>
+
+
+                <div class="service-content">
+
+                    <div class="service-title-row">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="3"
+                                />
+
+                                <path d="M12 5v4" />
+
+                                <path d="M12 15v4" />
+
+                                <path d="M5 12h4" />
+
+                                <path d="M15 12h4" />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            AC Vent Cleaning
+                        </h3>
+
+                    </div>
+
+
+                    <p>
+                        Cleaning of AC vents and surrounding areas
+                        to remove visible dust and dirt.
+                    </p>
+
+
+                    <div class="service-bottom">
+
+                        <div class="service-feature">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="7"
+                                />
+
+                                <path d="M8 12h8" />
+
+                                <path d="M12 8v8" />
+
+                            </svg>
+
+                            <span>
+                                Vent Cleaning
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#booking"
+                            class="service-link"
+                        >
+                            Book Now
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="services-cta">
+
+            <div>
+
+                <span class="cta-small">
+                    NOT SURE WHAT YOUR CAR NEEDS?
+                </span>
+
+                <h3>
+                    Talk to our team before booking.
+                </h3>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="services-cta-button"
+            >
+                Contact Us →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+     ===================================================== -->
+
+<section
+    class="process-section"
+    id="process"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading-left">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+
+                Simple booking.
+
+                <span>
+                    Easy service.
+                </span>
+
+            </h2>
+
+            <p>
+                Book your preferred service in a few
+                simple steps.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    01
+                </span>
+
+                <div class="process-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                        />
+
+                        <path d="M8 12h8" />
+
+                        <path d="M12 8v8" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Enter Details
+                </h3>
+
+                <p>
+                    Enter your name, phone number and vehicle details.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    02
+                </span>
+
+                <div class="process-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect
+                            x="5"
+                            y="5"
+                            width="14"
+                            height="14"
+                            rx="2"
+                        />
+
+                        <path d="M8 3v4" />
+
+                        <path d="M16 3v4" />
+
+                        <path d="M5 10h14" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Choose Service
+                </h3>
+
+                <p>
+                    Select the service you need for your vehicle.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    03
+                </span>
+
+                <div class="process-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="3"
+                        />
+
+                        <path d="M6 20c0-3.5 2.5-6 6-6s6 2.5 6 6" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Select Schedule
+                </h3>
+
+                <p>
+                    Choose your preferred service date and time.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">
+                    04
+                </span>
+
+                <div class="process-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M5 12l4 4L19 6" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Confirm Booking
+                </h3>
+
+                <p>
+                    Confirm your booking and receive your booking ID.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOOKING SECTION
+     ===================================================== -->
+
+<section
+    class="booking-section"
+    id="booking"
+>
+
+    <div class="container">
+
+
+        <!-- BOOKING HEADER -->
+
+        <div class="booking-heading">
+
+            <span class="section-label">
+                BOOK A SERVICE
+            </span>
+
+            <h2>
+
+                Schedule your car
+
+                <span>
+                    service in minutes.
+                </span>
+
+            </h2>
+
+            <p>
+
+                Enter your details, vehicle information,
+                choose your service and select a convenient
+                date and time.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BOOKING LAYOUT
+             ================================================= -->
+
+        <div class="booking-layout">
+
+
+            <!-- =================================================
+                 LEFT SIDE
+                 ================================================= -->
+
+            <div class="booking-info">
+
+
+                <div class="booking-info-heading">
+
+                    <span>
+                        HOW TO BOOK
+                    </span>
+
+                    <h3>
+                        Complete your booking in 4 simple steps.
+                    </h3>
+
+                </div>
+
+
+
+                <!-- STEP 01 -->
+
+                <div class="booking-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Enter Your Details
+                        </h3>
+
+                        <p>
+                            Provide your name and phone number
+                            so our team can contact you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 02 -->
+
+                <div class="booking-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Enter Vehicle Details
+                        </h3>
+
+                        <p>
+                            Tell us your vehicle type, brand,
+                            model, number and fuel type.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 03 -->
+
+                <div class="booking-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Choose a Service
+                        </h3>
+
+                        <p>
+                            Select the service you want
+                            from our available services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 04 -->
+
+                <div class="booking-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pick Date & Time
+                        </h3>
+
+                        <p>
+                            Choose your preferred appointment
+                            date and time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOOKING NOTE -->
+
+                <div class="booking-note">
+
+                    <strong>
+                        What happens next?
+                    </strong>
+
+                    <p>
+
+                        After you submit the booking,
+                        our team will review your request
+                        and contact you to confirm the appointment.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE - BOOKING FORM
+                 ================================================= -->
+
+            <div class="booking-form-card">
+
+
+                <div class="booking-form-header">
+
+                    <span>
+                        SERVICE BOOKING
+                    </span>
+
+                    <h3>
+                        Book Your Appointment
+                    </h3>
+
+                    <p>
+                        No account required. Enter your details below.
+                    </p>
+
+                </div>
+
+
+
+                <form
+                    method="POST"
+                    action="{% url 'booking' %}"
+                >
+
+                    {% csrf_token %}
+
+
+
+                    <!-- =================================================
+                         CUSTOMER DETAILS
+                         ================================================= -->
+
+                    <div class="booking-form-section-title">
+
+                        Customer Details
+
+                    </div>
+
+
+
+                    <!-- CUSTOMER NAME -->
+
+                    <div class="booking-form-group">
+
+                        <label for="customerName">
+
+                            Customer Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customer_name"
+                            placeholder="Enter your full name"
+                            maxlength="150"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="booking-form-group">
+
+                        <label for="customerPhone">
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            maxlength="20"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         VEHICLE DETAILS
+                         ================================================= -->
+
+                    <div class="booking-form-section-title">
+
+                        Vehicle Details
+
+                    </div>
+
+
+
+                    <!-- VEHICLE TYPE -->
+
+                    <div class="booking-form-group">
+
+                        <label for="vehicleType">
+
+                            Vehicle Type
+
+                        </label>
+
+                        <select
+                            id="vehicleType"
+                            name="vehicle_type"
+                            required
+                        >
+
+                            <option value="">
+                                -- Select vehicle type --
+                            </option>
+
+                            <option value="Hatchback">
+                                Hatchback
+                            </option>
+
+                            <option value="Sedan">
+                                Sedan
+                            </option>
+
+                            <option value="SUV">
+                                SUV
+                            </option>
+
+                            <option value="MUV">
+                                MUV
+                            </option>
+
+                            <option value="MPV">
+                                MPV
+                            </option>
+
+                            <option value="Coupe">
+                                Coupe
+                            </option>
+
+                            <option value="Convertible">
+                                Convertible
+                            </option>
+
+                            <option value="Pickup Truck">
+                                Pickup Truck
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- VEHICLE BRAND -->
+
+                    <div class="booking-form-group">
+
+                        <label for="vehicleBrand">
+
+                            Vehicle Brand
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="vehicleBrand"
+                            name="vehicle_brand"
+                            placeholder="Hyundai, Tata, Maruti..."
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- VEHICLE MODEL -->
+
+                    <div class="booking-form-group">
+
+                        <label for="vehicleModel">
+
+                            Vehicle Model
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="vehicleModel"
+                            name="vehicle_model"
+                            placeholder="Creta, Nexon, Swift..."
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- VEHICLE NUMBER -->
+
+                    <div class="booking-form-group">
+
+                        <label for="vehicleNumber">
+
+                            Vehicle Number
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="vehicleNumber"
+                            name="vehicle_number"
+                            placeholder="KA01AB1234"
+                            maxlength="20"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- VEHICLE YEAR -->
+
+                    <div class="booking-form-group">
+
+                        <label for="vehicleYear">
+
+                            Vehicle Year
+
+                            <span>
+                                (Optional)
+                            </span>
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="vehicleYear"
+                            name="vehicle_year"
+                            placeholder="2024"
+                            min="1900"
+                            max="2100"
+                        >
+
+                    </div>
+
+
+
+                    <!-- FUEL TYPE -->
+
+                    <div class="booking-form-group">
+
+                        <label for="fuelType">
+
+                            Fuel Type
+
+                            <span>
+                                (Optional)
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="fuelType"
+                            name="fuel_type"
+                        >
+
+                            <option value="">
+                                -- Select fuel type --
+                            </option>
+
+                            <option value="Petrol">
+                                Petrol
+                            </option>
+
+                            <option value="Diesel">
+                                Diesel
+                            </option>
+
+                            <option value="CNG">
+                                CNG
+                            </option>
+
+                            <option value="Electric">
+                                Electric
+                            </option>
+
+                            <option value="Hybrid">
+                                Hybrid
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SERVICE DETAILS
+                         ================================================= -->
+
+                    <div class="booking-form-section-title">
+
+                        Service Details
+
+                    </div>
+
+
+
+                    <div class="booking-form-group">
+
+                        <label for="service">
+
+                            Select Your Service
+
+                        </label>
+
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                            {% if not services %}disabled{% endif %}
+                        >
+
+                            <option value="">
+                                -- Select a service --
+                            </option>
+
+
+                            {% for service in services %}
+
+                                <option
+                                    value="{{ service.id }}"
+                                    data-price="{{ service.price }}"
+                                    data-duration="{{ service.duration }}"
+                                >
+
+                                    {{ service.name }}
+
+                                    {% if service.price %}
+                                        — ₹{{ service.price }}
+                                    {% endif %}
+
+                                </option>
+
+                            {% empty %}
+
+                                <option value="">
+                                    No services available
+                                </option>
+
+                            {% endfor %}
+
+                        </select>
+
+
+                        {% if not services %}
+
+                            <div class="booking-help-text">
+
+                                No services are currently available.
+
+                                Please add an active service
+                                from the SS Car Care Admin page.
+
+                            </div>
+
+                        {% endif %}
+
+
+
+                        <!-- SELECTED SERVICE INFORMATION -->
+
+                        <div
+                            id="selectedServiceInfo"
+                            class="selected-service-info"
+                            style="display: none;"
+                        >
+
+                            <div>
+
+                                <span>
+                                    Selected Service
+                                </span>
+
+                                <strong
+                                    id="selectedServiceName"
+                                >
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Price
+                                </span>
+
+                                <strong
+                                    id="selectedServicePrice"
+                                >
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Duration
+                                </span>
+
+                                <strong
+                                    id="selectedServiceDuration"
+                                >
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         DATE & TIME
+                         ================================================= -->
+
+                    <div class="booking-form-group">
+
+                        <label for="bookingDate">
+
+                            Preferred Date & Time
+
+                        </label>
+
+
+                        <input
+                            type="datetime-local"
+                            id="bookingDate"
+                            name="booking_date"
+                            required
+                        >
+
+
+                        <div class="booking-help-text">
+
+                            Select a convenient date and time
+                            for your appointment.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         NOTES
+                         ================================================= -->
+
+                    <div class="booking-form-group">
+
+                        <label for="bookingNotes">
+
+                            Additional Requirements
+
+                            <span>
+                                (Optional)
+                            </span>
+
+                        </label>
+
+
+                        <textarea
+                            id="bookingNotes"
+                            name="notes"
+                            rows="4"
+                            placeholder="Tell us if your car needs any specific attention..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SUBMIT
+                         ================================================= -->
+
+                    <button
+                        type="submit"
+                        class="booking-main-button"
+                        {% if not services %}disabled{% endif %}
+                    >
+
+                        Confirm Service Booking
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <p class="booking-secure-note">
+
+                        ✓ Your booking details will be securely
+                        submitted to SS Car Care.
+
+                    </p>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRACKING
+     ===================================================== -->
+
+<section
+    class="tracking-section"
+    id="tracking"
+>
+
+    <div class="container tracking-container">
+
+
+        <div class="tracking-heading">
+
+            <span class="section-label">
+                SERVICE TRACKING
+            </span>
+
+            <h2>
+
+                Track your
+
+                <span>
+                    service.
+                </span>
+
+            </h2>
+
+            <p>
+                Enter your booking ID to check your service status.
+            </p>
+
+        </div>
+
+
+        <div class="tracking-box">
+
+            <form
+                id="trackingForm"
+                method="GET"
+                action="{% url 'track_service' %}"
+            >
+
+                <input
+                    type="text"
+                    name="booking_id"
+                    id="serviceId"
+                    placeholder="Enter Booking ID e.g. 1"
+                    required
+                >
+
+
+                <button type="submit">
+                    Track Service
+                </button>
+
+            </form>
+
+
+            <div
+                class="tracking-result"
+                id="trackingResult"
+            >
+
+                {% if tracking_booking %}
+
+                    <div class="tracking-status">
+
+                        <strong>
+                            Booking #{{ tracking_booking.id }}
+                        </strong>
+
+                        <span>
+                            {{ tracking_booking.status }}
+                        </span>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADVERTISEMENT
+     ===================================================== -->
+
+<section class="advertisement-section">
+
+    <div class="container advertisement-container">
+
+
+        <div class="advertisement-content">
+
+            <span class="section-label">
+                SPECIAL OFFER
+            </span>
+
+            <h2>
+
+                Keep your car
+
+                <span>
+                    looking fresh.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Regular car care helps maintain the appearance
+                and comfort of your vehicle.
+
+            </p>
+
+
+            <a
+                href="#booking"
+                class="primary-button"
+            >
+
+                Book Your Service
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="advertisement-image">
+
+            <img
+                src="{% static 'images/services/full-car-detailing.jpg' %}"
+                alt="Car service"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+
+<section
+    class="contact-section"
+    id="contact"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading-center">
+
+            <span class="section-label">
+                CONTACT US
+            </span>
+
+            <h2>
+
+                We're here to
+
+                <span>
+                    help.
+                </span>
+
+            </h2>
+
+            <p>
+
+                Have a question about our services?
+                Get in touch with our team.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M6 4l3 3-2 2c1.5 3 3 4.5 6 6l2-2 3 3-2 3c-6-1-10-5-11-11z" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    +91 XXXXX XXXXX
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect
+                            x="4"
+                            y="6"
+                            width="16"
+                            height="12"
+                            rx="2"
+                        />
+
+                        <path d="M5 8l7 5 7-5" />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    support@sscarcare.com
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z" />
+
+                        <circle
+                            cx="12"
+                            cy="10"
+                            r="2.5"
+                        />
+
+                    </svg>
+
+                </div>
+
+                <h3>
+                    Visit Us
+                </h3>
+
+                <p>
+                    Your Location, India
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+
+        <div class="footer-brand">
+
+
+            <a
+                href="#home"
+                class="brand"
+            >
+
+                <div class="brand-mark">
+
+                    <svg viewBox="0 0 32 32">
+
+                        <path d="M7 19h18" />
+
+                        <path d="M9 19l2-6h10l2 6" />
+
+                        <path d="M11 13l1.5-3h7l1.5 3" />
+
+                        <circle
+                            cx="10"
+                            cy="21"
+                            r="2"
+                        />
+
+                        <circle
+                            cx="22"
+                            cy="21"
+                            r="2"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="brand-text">
+
+                    <strong>
+                        SS CAR CARE
+                    </strong>
+
+                    <span>
+                        CARE • CLEAN • PROTECT
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <p>
+
+                Professional car cleaning and care services
+                focused on quality, convenience and customer satisfaction.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#process">
+                How It Works
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#services">
+                Car Wash
+            </a>
+
+            <a href="#services">
+                Interior Cleaning
+            </a>
+
+            <a href="#services">
+                Car Detailing
+            </a>
+
+            <a href="#services">
+                Paint Protection
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h4>
+                Support
+            </h4>
+
+            <a href="#tracking">
+                Service Tracking
+            </a>
+
+            <a href="#booking">
+                Booking Support
+            </a>
+
+            <a href="#contact">
+                Customer Care
+            </a>
+
+            <span>
+                Mon - Sun
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-content">
+
+            <p>
+                © 2026 SS Car Care. All rights reserved.
+            </p>
+
+            <p>
+                Designed for better car care.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOKING SUCCESS POPUP
+     ===================================================== -->
+
+{% if booking_success %}
+
+<div
+    id="bookingSuccessModal"
+    class="booking-success-overlay"
+>
+
+    <div class="booking-success-box">
+
+
+        <button
+            type="button"
+            class="booking-close"
+            onclick="closeBookingSuccess()"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+
+        <h2>
+            Booking Successful!
+        </h2>
+
+
+
+        <p>
+
+            Your service booking has been received successfully.
+
+            Please keep your booking ID for tracking.
+
+        </p>
+
+
+
+        <div class="booking-details">
+
+
+            <!-- BOOKING ID -->
+
+            <div>
+
+                <span>
+                    Booking ID
+                </span>
+
+                <strong>
+                    #{{ booking_success.id }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- CUSTOMER -->
+
+            <div>
+
+                <span>
+                    Customer
+                </span>
+
+                <strong>
+                    {{ booking_success.customer_name }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div>
+
+                <span>
+                    Phone
+                </span>
+
+                <strong>
+                    {{ booking_success.phone }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- VEHICLE TYPE -->
+
+            <div>
+
+                <span>
+                    Vehicle Type
+                </span>
+
+                <strong>
+                    {{ booking_success.vehicle_type }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- VEHICLE -->
+
+            <div>
+
+                <span>
+                    Vehicle
+                </span>
+
+                <strong>
+
+                    {{ booking_success.vehicle_brand }}
+                    {{ booking_success.vehicle_model }}
+
+                </strong>
+
+            </div>
+
+
+
+            <!-- VEHICLE NUMBER -->
+
+            <div>
+
+                <span>
+                    Vehicle Number
+                </span>
+
+                <strong>
+                    {{ booking_success.vehicle_number }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- SERVICE -->
+
+            <div>
+
+                <span>
+                    Service
+                </span>
+
+                <strong>
+                    {{ booking_success.service.name }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div>
+
+                <span>
+                    Date
+                </span>
+
+                <strong>
+                    {{ booking_success.booking_date|date:"d M Y, h:i A" }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- AMOUNT -->
+
+            <div>
+
+                <span>
+                    Amount
+                </span>
+
+                <strong>
+                    ₹{{ booking_success.amount }}
+                </strong>
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div>
+
+                <span>
+                    Status
+                </span>
+
+                <strong>
+                    {{ booking_success.status }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <button
+            type="button"
+            class="success-button"
+            onclick="closeBookingSuccess()"
+        >
+
+            Done
+
+        </button>
+
+
+    </div>
+
+</div>
+
+{% endif %}
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="{% static 'js/script.js' %}"></script>
+
+
+<script>
+
+/* =====================================================
+   BOOKING SUCCESS POPUP
+   ===================================================== */
+
+function closeBookingSuccess() {
+
+    const modal =
+        document.getElementById(
+            "bookingSuccessModal"
+        );
+
+
+    if (modal) {
+
+        modal.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   SERVICE DROPDOWN
+   SHOW PRICE + DURATION
+   ===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const serviceSelect =
+            document.getElementById(
+                "service"
+            );
+
+
+        const selectedServiceInfo =
+            document.getElementById(
+                "selectedServiceInfo"
+            );
+
+
+        const selectedServiceName =
+            document.getElementById(
+                "selectedServiceName"
+            );
+
+
+        const selectedServicePrice =
+            document.getElementById(
+                "selectedServicePrice"
+            );
+
+
+        const selectedServiceDuration =
+            document.getElementById(
+                "selectedServiceDuration"
+            );
+
+
+        if (serviceSelect) {
+
+
+            serviceSelect.addEventListener(
+                "change",
+                function () {
+
+
+                    const selectedOption =
+                        serviceSelect.options[
+                            serviceSelect.selectedIndex
+                        ];
+
+
+                    if (
+                        !selectedOption ||
+                        !selectedOption.value
+                    ) {
+
+                        if (selectedServiceInfo) {
+
+                            selectedServiceInfo.style.display =
+                                "none";
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    const serviceName =
+                        selectedOption.textContent
+                            .trim();
+
+
+                    const price =
+                        selectedOption.dataset.price;
+
+
+                    const duration =
+                        selectedOption.dataset.duration;
+
+
+                    if (selectedServiceName) {
+
+                        selectedServiceName.textContent =
+                            serviceName
+                                .split("—")[0]
+                                .trim();
+
+                    }
+
+
+                    if (selectedServicePrice) {
+
+                        if (price) {
+
+                            selectedServicePrice.textContent =
+                                "₹" + price;
+
+                        } else {
+
+                            selectedServicePrice.textContent =
+                                "Contact us";
+
+                        }
+
+                    }
+
+
+                    if (selectedServiceDuration) {
+
+                        if (duration) {
+
+                            selectedServiceDuration.textContent =
+                                duration;
+
+                        } else {
+
+                            selectedServiceDuration.textContent =
+                                "Not specified";
+
+                        }
+
+                    }
+
+
+                    if (selectedServiceInfo) {
+
+                        selectedServiceInfo.style.display =
+                            "block";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           BOOKING DATE
+           ================================================= */
+
+        const bookingDate =
+            document.getElementById(
+                "bookingDate"
+            );
+
+
+        if (bookingDate) {
+
+            const now =
+                new Date();
+
+
+            const year =
+                now.getFullYear();
+
+
+            const month =
+                String(
+                    now.getMonth() + 1
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            const day =
+                String(
+                    now.getDate()
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            const hours =
+                String(
+                    now.getHours()
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            const minutes =
+                String(
+                    now.getMinutes()
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            bookingDate.min =
+                `${year}-${month}-${day}T${hours}:${minutes}`;
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Cars | SS Car Care</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8fb;
+    color: #102b46;
+}
+
+.header {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+}
+
+.logo {
+    font-weight: 800;
+}
+
+.header a {
+    background: #164a7a;
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 65px);
+}
+
+.sidebar {
+    width: 230px;
+    background: #102b46;
+    padding: 20px 15px;
+}
+
+.sidebar a {
+    display: block;
+    color: #dce8f2;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #164a7a;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.table-card {
+    background: white;
+    border: 1px solid #e1e7ed;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #edf1f4;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #f8fafc;
+    color: #617384;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+SS CAR CARE
+</div>
+
+<a href="{% url 'owner_logout' %}">
+Logout
+</a>
+
+</header>
+
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<a href="{% url 'owner_dashboard' %}">
+Dashboard
+</a>
+
+<a href="{% url 'owner_bookings' %}">
+Bookings
+</a>
+
+<a
+    href="{% url 'owner_cars' %}"
+    class="active"
+>
+Cars
+</a>
+
+<a href="{% url 'owner_services' %}">
+Services
+</a>
+
+<a href="{% url 'owner_orders' %}">
+Orders
+</a>
+
+<a href="{% url 'owner_customers' %}">
+Customers
+</a>
+
+<a href="{% url 'owner_messages' %}">
+Messages
+</a>
+
+<a href="{% url 'home' %}">
+View Website
+</a>
+
+</aside>
+
+
+<main class="main">
+
+<h1>
+Customer Cars
+</h1>
+
+<p>
+All vehicles registered by customers.
+</p>
+
+<div class="table-card">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vehicle Number</th>
+<th>Brand</th>
+<th>Model</th>
+<th>Year</th>
+<th>Fuel</th>
+<th>Customer</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for car in cars %}
+
+<tr>
+
+<td>
+{{ car.vehicle_number }}
+</td>
+
+<td>
+{{ car.brand }}
+</td>
+
+<td>
+{{ car.model }}
+</td>
+
+<td>
+{{ car.year|default:"-" }}
+</td>
+
+<td>
+{{ car.fuel_type|default:"-" }}
+</td>
+
+<td>
+{{ car.user.username }}
+</td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+<td colspan="6">
+No cars registered yet.
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,924 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bookings | SS Car Care</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8fb;
+    color: #102b46;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #102b46;
+}
+
+.header a {
+    background: #164a7a;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 15px;
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.header a:hover {
+    background: #102b46;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 65px);
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 230px;
+    background: #102b46;
+
+    padding: 20px 15px;
+
+    flex-shrink: 0;
+}
+
+.sidebar a {
+    display: block;
+
+    padding: 12px;
+
+    margin-bottom: 4px;
+
+    color: #dce8f2;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #164a7a;
+    color: white;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+    flex: 1;
+
+    padding: 30px;
+
+    overflow-x: auto;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 28px;
+}
+
+.page-description {
+    color: #687887;
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(160px, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: white;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 8px;
+
+    padding: 18px;
+}
+
+.summary-label {
+    font-size: 12px;
+    color: #71808d;
+
+    margin-bottom: 7px;
+}
+
+.summary-value {
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #102b46;
+}
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.table-card {
+    background: white;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1250px;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #edf1f4;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+th {
+    background: #f8fafc;
+
+    color: #617384;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #fafcfe;
+}
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.customer-name {
+    font-weight: 700;
+
+    color: #102b46;
+
+    margin-bottom: 4px;
+}
+
+.phone {
+    color: #71808d;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   VEHICLE
+========================================================= */
+
+.vehicle-number {
+    font-weight: 700;
+
+    color: #164a7a;
+
+    margin-bottom: 4px;
+}
+
+.vehicle-details {
+    color: #71808d;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   SERVICE
+========================================================= */
+
+.service-name {
+    font-weight: 700;
+
+    color: #102b46;
+
+    margin-bottom: 4px;
+}
+
+.service-category {
+    color: #71808d;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+.amount {
+    font-weight: 700;
+
+    color: #102b46;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #edf4fa;
+
+    color: #164a7a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #f4f6f8;
+
+    color: #566674;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   UPDATE FORM
+========================================================= */
+
+.update-form {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+select {
+    padding: 7px 8px;
+
+    border: 1px solid #ccd6df;
+
+    border-radius: 4px;
+
+    background: white;
+
+    color: #102b46;
+
+    font-size: 12px;
+}
+
+.update-btn {
+    padding: 7px 10px;
+
+    border: none;
+
+    background: #164a7a;
+
+    color: white;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.update-btn:hover {
+    background: #102b46;
+}
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.notes {
+    max-width: 180px;
+
+    color: #617384;
+
+    line-height: 1.4;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #71808d;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .summary {
+        grid-template-columns:
+            repeat(2, minmax(140px, 1fr));
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        display: flex;
+
+        gap: 5px;
+
+        overflow-x: auto;
+
+        padding: 10px;
+    }
+
+    .sidebar a {
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    .summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+======================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+        SS CAR CARE
+    </div>
+
+    <a href="{% url 'owner_logout' %}">
+        Logout
+    </a>
+
+</header>
+
+
+<!-- =======================================================
+     LAYOUT
+======================================================== -->
+
+<div class="layout">
+
+
+<!-- =======================================================
+     SIDEBAR
+======================================================== -->
+
+<aside class="sidebar">
+
+    <a href="{% url 'owner_dashboard' %}">
+        Dashboard
+    </a>
+
+    <a href="{% url 'owner_bookings' %}" class="active">
+        Bookings
+    </a>
+
+    <a href="{% url 'owner_cars' %}">
+        Cars
+    </a>
+
+    <a href="{% url 'owner_services' %}">
+        Services
+    </a>
+
+    <a href="{% url 'owner_orders' %}">
+        Orders
+    </a>
+
+    <a href="{% url 'owner_customers' %}">
+        Customers
+    </a>
+
+    <a href="{% url 'owner_messages' %}">
+        Messages
+    </a>
+
+    <a href="{% url 'home' %}">
+        View Website
+    </a>
+
+</aside>
+
+
+<!-- =======================================================
+     MAIN
+======================================================== -->
+
+<main class="main">
+
+    <h1>
+        Customer Bookings
+    </h1>
+
+    <p class="page-description">
+        View customer details, vehicles, selected services,
+        booking amounts and update service status.
+    </p>
+
+
+    <!-- ===================================================
+         SUMMARY
+    ==================================================== -->
+
+    <div class="summary">
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Total Bookings
+            </div>
+
+            <div class="summary-value">
+                {{ bookings|length }}
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Booked / Confirmed
+            </div>
+
+            <div class="summary-value">
+
+                {% with count=0 %}
+
+                    {% for booking in bookings %}
+
+                        {% if booking.status == "Booked" or booking.status == "Confirmed" %}
+                            {% with count=count|add:"1" %}{% endwith %}
+                        {% endif %}
+
+                    {% endfor %}
+
+                {% endwith %}
+
+                {{ bookings|length }}
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Completed
+            </div>
+
+            <div class="summary-value">
+
+                {% with completed=0 %}
+
+                    {% for booking in bookings %}
+
+                        {% if booking.status == "Completed" %}
+                            {% with completed=completed|add:"1" %}{% endwith %}
+                        {% endif %}
+
+                    {% endfor %}
+
+                {% endwith %}
+
+                —
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Customer Service
+            </div>
+
+            <div class="summary-value">
+                Active
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         BOOKINGS TABLE
+    ==================================================== -->
+
+    <div class="table-card">
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            ID
+                        </th>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Vehicle
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Booking Date
+                        </th>
+
+                        <th>
+                            Amount
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Payment
+                        </th>
+
+                        <th>
+                            Notes
+                        </th>
+
+                        <th>
+                            Update
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                {% for booking in bookings %}
+
+                    <tr>
+
+                        <!-- ID -->
+
+                        <td>
+
+                            <strong>
+                                #{{ booking.id }}
+                            </strong>
+
+                        </td>
+
+
+                        <!-- CUSTOMER -->
+
+                        <td>
+
+                            <div class="customer-name">
+                                {{ booking.customer_name }}
+                            </div>
+
+                            <div class="phone">
+                                {{ booking.phone }}
+                            </div>
+
+                        </td>
+
+
+                        <!-- VEHICLE -->
+
+                        <td>
+
+                            <div class="vehicle-number">
+                                {{ booking.vehicle_number }}
+                            </div>
+
+                            <div class="vehicle-details">
+
+                                {{ booking.vehicle_brand }}
+
+                                {{ booking.vehicle_model }}
+
+                                {% if booking.vehicle_year %}
+                                    • {{ booking.vehicle_year }}
+                                {% endif %}
+
+                                {% if booking.fuel_type %}
+                                    • {{ booking.fuel_type }}
+                                {% endif %}
+
+                            </div>
+
+                        </td>
+
+
+                        <!-- SERVICE -->
+
+                        <td>
+
+                            <div class="service-name">
+                                {{ booking.service.name }}
+                            </div>
+
+                            <div class="service-category">
+                                {{ booking.service.category }}
+                            </div>
+
+                        </td>
+
+
+                        <!-- DATE -->
+
+                        <td>
+
+                            {{ booking.booking_date|date:"d M Y" }}
+
+                            <br>
+
+                            <span style="color:#71808d;">
+                                {{ booking.booking_date|date:"h:i A" }}
+                            </span>
+
+                        </td>
+
+
+                        <!-- AMOUNT -->
+
+                        <td>
+
+                            <span class="amount">
+                                ₹{{ booking.amount }}
+                            </span>
+
+                        </td>
+
+
+                        <!-- STATUS -->
+
+                        <td>
+
+                            <span class="status-badge">
+                                {{ booking.status }}
+                            </span>
+
+                        </td>
+
+
+                        <!-- PAYMENT -->
+
+                        <td>
+
+                            <span class="payment-badge">
+                                {{ booking.payment_status }}
+                            </span>
+
+                        </td>
+
+
+                        <!-- NOTES -->
+
+                        <td>
+
+                            <div class="notes">
+
+                                {% if booking.notes %}
+                                    {{ booking.notes }}
+                                {% else %}
+                                    —
+                                {% endif %}
+
+                            </div>
+
+                        </td>
+
+
+                        <!-- UPDATE -->
+
+                        <td>
+
+                            <form
+                                method="POST"
+                                action="{% url 'owner_update_booking' booking.id %}"
+                                class="update-form"
+                            >
+
+                                {% csrf_token %}
+
+                                <select name="status">
+
+                                    {% for value,label in booking.STATUS_CHOICES %}
+
+                                        <option
+                                            value="{{ value }}"
+                                            {% if booking.status == value %}
+                                                selected
+                                            {% endif %}
+                                        >
+                                            {{ label }}
+                                        </option>
+
+                                    {% endfor %}
+
+                                </select>
+
+
+                                <button
+                                    type="submit"
+                                    class="update-btn"
+                                >
+                                    Update
+                                </button>
+
+                            </form>
+
+                        </td>
+
+                    </tr>
+
+
+                {% empty %}
+
+                    <tr>
+
+                        <td
+                            colspan="10"
+                            class="empty"
+                        >
+
+                            No customer bookings yet.
+
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</main>
+
+</div>
+
+</body>
+</html>
+```
